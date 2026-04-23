@@ -99,73 +99,15 @@
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <!-- Decorative composition: coastal horizon + wiring diagram -->
-        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#E0B35B" stop-opacity="0.35"/>
-              <stop offset="100%" stop-color="#0E1B2C" stop-opacity="0"/>
-            </linearGradient>
-            <radialGradient id="sun" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#E0B35B" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#E0B35B" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-
-          <!-- Sky glow -->
-          <rect width="400" height="500" fill="url(#sky)"/>
-
-          <!-- Sun disc -->
-          <circle cx="280" cy="180" r="60" fill="url(#sun)"/>
-          <circle cx="280" cy="180" r="22" fill="#E0B35B" opacity="0.85"/>
-
-          <!-- Horizon mountains -->
-          <path d="M0 340 L60 310 L120 325 L180 295 L240 315 L300 285 L360 310 L400 295 L400 500 L0 500 Z"
-                fill="#0a1424" opacity="0.7"/>
-          <path d="M0 380 L50 360 L110 370 L170 345 L230 365 L290 340 L350 360 L400 350 L400 500 L0 500 Z"
-                fill="#050c18" opacity="0.9"/>
-
-          <!-- Thin constellation lines -->
-          <g stroke="#E0B35B" stroke-width="0.5" opacity="0.35" fill="none">
-            <circle cx="80" cy="80" r="1.5" fill="#E0B35B"/>
-            <circle cx="150" cy="120" r="1" fill="#E0B35B"/>
-            <circle cx="220" cy="90" r="1.2" fill="#E0B35B"/>
-            <circle cx="330" cy="110" r="1" fill="#E0B35B"/>
-            <circle cx="60" cy="160" r="1" fill="#E0B35B"/>
-            <circle cx="190" cy="200" r="1.3" fill="#E0B35B"/>
-            <line x1="80" y1="80" x2="150" y2="120"/>
-            <line x1="150" y1="120" x2="220" y2="90"/>
-            <line x1="220" y1="90" x2="330" y2="110"/>
-            <line x1="60" y1="160" x2="150" y2="120"/>
-            <line x1="190" y1="200" x2="150" y2="120"/>
-          </g>
-
-          <!-- Utility pole silhouette -->
-          <g fill="#050c18" opacity="0.95">
-            <rect x="96" y="200" width="3" height="180"/>
-            <rect x="70" y="228" width="55" height="2"/>
-            <rect x="65" y="252" width="65" height="2"/>
-          </g>
-          <!-- Wires -->
-          <g stroke="#E0B35B" stroke-width="0.6" fill="none" opacity="0.6">
-            <path d="M75 229 Q 200 260 325 229"/>
-            <path d="M97 229 Q 200 275 303 229"/>
-            <path d="M120 229 Q 200 290 280 229"/>
-            <path d="M70 253 Q 200 290 330 253"/>
-            <path d="M130 253 Q 200 310 270 253"/>
-          </g>
-
-          <!-- Palm silhouette -->
-          <g fill="#050c18" opacity="0.95" transform="translate(340 260)">
-            <rect x="-2" y="0" width="3" height="120"/>
-            <path d="M-1 5 Q -30 -8 -50 -2 Q -28 4 -1 10 Z"/>
-            <path d="M0 5 Q 25 -12 48 0 Q 25 6 0 12 Z"/>
-            <path d="M-1 8 Q -22 18 -38 28 Q -20 18 -1 14 Z"/>
-            <path d="M0 8 Q 22 20 32 32 Q 22 18 0 14 Z"/>
-            <path d="M0 0 Q -5 -20 -18 -28 Q -4 -18 1 -3 Z"/>
-            <path d="M0 0 Q 6 -22 20 -30 Q 6 -18 1 -3 Z"/>
-          </g>
-        </svg>
+        <img
+          class="hero-photo"
+          src="assets/images/panel-breaker-electrical-work.png"
+          alt=""
+          width="960"
+          height="1200"
+          decoding="async"
+          fetchpriority="high"
+        />
 
         <div class="hero-badge">
           <span class="hero-badge-icon">
@@ -303,7 +245,7 @@
 <!-- About / stats panel -->
 <section>
   <div class="container">
-    <div class="panel-dark reveal">
+    <div class="panel-dark panel-dark--craft reveal">
       <div class="about-grid">
         <div class="about-text">
           <span class="eyebrow">The workshop</span>
@@ -394,9 +336,9 @@
 </section>
 
 <!-- Testimonial -->
-<section>
+<section class="testimonial-band">
   <div class="container">
-    <div class="testimonial reveal">
+    <div class="testimonial testimonial--textured reveal">
       <div class="quote-mark">&ldquo;</div>
       <blockquote>
         I was really impressed with his service and knowledge. Prompt, polite and really helpful — totally
