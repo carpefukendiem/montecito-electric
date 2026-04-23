@@ -174,22 +174,15 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   text-decoration: none;
 }
 .brand-mark {
-  width: 42px; height: 42px;
+  width: 48px; height: 48px;
   flex: 0 0 auto;
   display: grid; place-items: center;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--amber-lite);
 }
 .brand-mark .brand-logo {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   display: block;
-}
-.site-footer .brand-mark {
-  background: var(--ivory);
-  border: 1px solid rgba(14, 27, 44, 0.12);
 }
 .brand-text {
   display: flex; flex-direction: column; line-height: 1;
