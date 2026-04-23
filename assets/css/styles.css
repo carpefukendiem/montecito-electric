@@ -65,7 +65,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 1000;
-  opacity: .35;
+  opacity: .22;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0 0.1  0 0 0 0.08 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
 }
@@ -181,10 +181,9 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   background: var(--ink);
   color: var(--amber-lite);
 }
-.brand-mark .brand-logo {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
+.brand-mark svg {
+  width: 22px;
+  height: 22px;
   display: block;
 }
 .brand-text {
@@ -383,7 +382,9 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: linear-gradient(160deg, #1a2a42 0%, #0E1B2C 55%, #050c18 100%);
-  box-shadow: 0 40px 80px -30px rgba(14, 27, 44, 0.5);
+  box-shadow:
+    0 50px 100px -40px rgba(5, 12, 24, 0.55),
+    0 0 0 1px rgba(14, 27, 44, 0.1);
   animation: fadeUp 1.2s var(--ease) .3s both;
 }
 .hero-visual::before {
@@ -392,9 +393,9 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(224, 179, 91, 0.28), transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(180, 85, 60, 0.18), transparent 55%),
-    linear-gradient(180deg, transparent 45%, rgba(5, 12, 24, 0.55) 100%);
+    radial-gradient(ellipse at 15% 0%, rgba(224, 179, 91, 0.2), transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(180, 85, 60, 0.12), transparent 50%),
+    linear-gradient(180deg, transparent 50%, rgba(5, 12, 24, 0.45) 100%);
   pointer-events: none;
 }
 .hero-photo {
@@ -403,13 +404,12 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 32%;
   z-index: 0;
 }
-.hero-badge { z-index: 2; }
-
 .hero-badge {
   position: absolute;
+  z-index: 2;
   bottom: 1.75rem; left: 1.75rem; right: 1.75rem;
   background: rgba(246, 241, 231, 0.96);
   backdrop-filter: blur(8px);
@@ -601,16 +601,16 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../images/best-electrician-in-montecito.png") 92% 55% / min(52vw, 380px) auto no-repeat;
-  opacity: 0.11;
+  background: url("../images/best-electrician-in-montecito.png") 92% 50% / min(52vw, 420px) auto no-repeat;
+  opacity: 0.16;
   pointer-events: none;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: soft-light;
 }
 @media (max-width: 899px) {
   .panel-dark--craft::after {
     background-position: 50% 100%;
-    background-size: min(90vw, 320px) auto;
-    opacity: 0.08;
+    background-size: min(92vw, 300px) auto;
+    opacity: 0.12;
   }
 }
 .panel-dark .eyebrow { color: var(--amber-lite); }
@@ -742,9 +742,10 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   z-index: 0;
   background-image: url("../images/background texture.png");
   background-size: cover;
-  background-position: center;
-  opacity: 0.42;
+  background-position: center 40%;
+  opacity: 0.5;
   mix-blend-mode: multiply;
+  filter: contrast(1.04) saturate(0.95);
 }
 .testimonial--textured::after {
   content: "";
@@ -753,8 +754,8 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   z-index: 0;
   background: linear-gradient(
     180deg,
-    rgba(246, 241, 231, 0.92) 0%,
-    rgba(246, 241, 231, 0.55) 45%,
+    rgba(246, 241, 231, 0.88) 0%,
+    rgba(246, 241, 231, 0.4) 42%,
     rgba(246, 241, 231, 0.9) 100%
   );
   pointer-events: none;
@@ -967,6 +968,9 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   gap: .5rem .5rem;
   font-size: .92rem;
 }
+@media (max-width: 520px) {
+  .svc-tile ul { grid-template-columns: 1fr; }
+}
 .svc-tile li {
   display: flex; align-items: center; gap: .5rem;
   color: var(--ink-soft);
@@ -985,13 +989,22 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   border: 1px solid rgba(14, 27, 44, 0.1);
   aspect-ratio: 16 / 10;
   background: rgba(14, 27, 44, 0.06);
+  box-shadow: 0 20px 50px -32px rgba(14, 27, 44, 0.45);
+  transition: box-shadow 0.45s var(--ease), border-color 0.35s var(--ease);
+}
+.svc-feature:hover {
+  border-color: rgba(200, 146, 58, 0.35);
+  box-shadow: 0 28px 60px -28px rgba(14, 27, 44, 0.35);
 }
 .svc-feature img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 45%;
+  transition: transform 0.75s var(--ease);
 }
+.svc-feature:hover img { transform: scale(1.02); }
 
 /* ---------- About page photography ---------- */
 .about-establish {
@@ -1005,6 +1018,7 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   height: auto;
   max-height: min(78vh, 720px);
   object-fit: cover;
+  object-position: center 40%;
 }
 .about-establish figcaption {
   position: absolute;
@@ -1026,12 +1040,14 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   border: 1px solid rgba(14, 27, 44, 0.1);
   aspect-ratio: 21 / 9;
   background: rgba(14, 27, 44, 0.06);
+  box-shadow: 0 20px 48px -28px rgba(14, 27, 44, 0.35);
 }
 .about-area-hero img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 35%;
 }
 
 /* ---------- Contact page ---------- */
@@ -1056,20 +1072,23 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
     align-items: stretch;
   }
 }
-.contact-location-hero {
+.contact-hero-fig {
   margin: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid rgba(14, 27, 44, 0.12);
   min-height: 240px;
   background: #0E1B2C;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 24px 50px -30px rgba(5, 12, 24, 0.45);
 }
-.contact-location-hero img {
+.contact-hero-fig img {
   display: block;
   width: 100%;
   height: 100%;
   min-height: 240px;
   object-fit: cover;
+  object-position: center 42%;
 }
 .contact-map-frame {
   border-radius: var(--radius-lg);
