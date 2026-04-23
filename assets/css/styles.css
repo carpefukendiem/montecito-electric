@@ -4,8 +4,7 @@
    golden-hour amber, ivory. Serif display + refined sans.
    ========================================================= */
 
-/* ---------- Fonts (self-hosted via Google Fonts CDN) ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap');
+/* ---------- Fonts — loaded via <link> in HTML <head> ---------- */
 
 /* ---------- Design tokens ---------- */
 :root {
@@ -18,10 +17,10 @@
   --bone:       #E7DFC9;
   --amber:      #C8923A;       /* golden-hour accent */
   --amber-lite: #E0B35B;
-  --amber-deep: #9A6E22;
+  --amber-deep: #7A5615;
   --terracotta: #B4553C;
   --sage:       #6B7A5A;
-  --muted:      #6B7383;
+  --muted:      #525A68;
 
   /* Typography */
   --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;
@@ -576,7 +575,7 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../images/best-electrician-in-montecito.png") 92% 50% / min(52vw, 420px) auto no-repeat;
+  background: url("../images/best-electrician-in-montecito.webp") 92% 50% / min(52vw, 420px) auto no-repeat;
   opacity: 0.16;
   pointer-events: none;
   mix-blend-mode: soft-light;
@@ -715,7 +714,7 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("../images/background texture.png");
+  background-image: url("../images/background texture.webp");
   background-size: cover;
   background-position: center 40%;
   opacity: 0.5;
