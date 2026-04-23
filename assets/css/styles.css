@@ -173,7 +173,7 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   text-decoration: none;
 }
 .brand-logo {
-  height: 60px;
+  height: 100px;
   width: auto;
   object-fit: contain;
   display: block;
