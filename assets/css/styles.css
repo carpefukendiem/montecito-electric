@@ -181,10 +181,15 @@ section { padding: clamp(5rem, 9vw, 8.5rem) 0; position: relative; }
   background: var(--ink);
   color: var(--amber-lite);
 }
-.brand-mark svg {
-  width: 22px;
-  height: 22px;
+.brand-mark .brand-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
   display: block;
+}
+.site-footer .brand-mark {
+  background: var(--ivory);
+  border: 1px solid rgba(14, 27, 44, 0.12);
 }
 .brand-text {
   display: flex; flex-direction: column; line-height: 1;
