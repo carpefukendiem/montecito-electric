@@ -15,19 +15,17 @@ This is a static, dependency-free website built with hand-written HTML, CSS, and
 
 ## Pages
 
-| File             | Purpose                                                |
-| ---------------- | ------------------------------------------------------ |
-| `index.html`     | Homepage — hero, services overview, about, testimonial |
-| `services.html`  | Detailed service catalogue with deep-link anchors      |
-| `about.html`     | Company story, values, service area                    |
-| `contact.html`   | Contact info, service-request form, map                |
+| File             | Purpose                                                       |
+| ---------------- | ------------------------------------------------------------- |
+| `index.html`     | Homepage — hero, services overview, about, testimonial, CTA   |
+| `about.html`     | Owner's note, values, service area                            |
+| `contact.html`   | Contact info, service-request form, map                       |
 
 ## File structure
 
 ```
 .
 ├── index.html
-├── services.html
 ├── about.html
 ├── contact.html
 ├── README.md
